@@ -115,17 +115,67 @@ body {
     border-radius: 0;
 }
 
+/* CTA Contact Section */
+.cta-contact {
+    background: url('images/img.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 80px 0;
+    position: relative;
+}
+
+.cta-contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.cta-contact .container {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-contact p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.cta-contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+
 /* ==========================
    What We Do
 ========================== */
 .what-we-do {
-    font-weight: 500;
-    font-size: clamp(2rem, 5vw, 50px);
+    /* font-weight: 500;
+    font-size: clamp(2rem, 5vw, 50px); */
+
 }
 
 .texts {
     font-weight: 400;
-    font-size: 21px;
+    font-size: 17px;
     color: var(--text-color);
 }
 
@@ -149,7 +199,99 @@ body {
     font-size: 16px;
     text-align: justify;
 }
+/* Card container basic */
+/* .card {
+    background-color: var(--light-color);
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    position: relative;
+} */
+.card {
+    background: rgba(0, 123, 255, 0.04);
+    /* Light brand tint background */
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    /* or keep same to stay clean */
+}
 
+/* Hover effect */
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Card image style */
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #f9f9f9;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+/* Image hover animation */
+.card:hover img {
+    transform: rotate(30deg) scale(1.05);
+}
+
+/* Headings */
+.card h5 {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Card text */
+.cardtexts {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #555;
+}
+
+/* Optional: add a subtle gradient line under heading */
+.card h5::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+.why-choose-us {
+    background: #000;
+    /* Or your dark brand color */
+    color: #fff;
+}
+
+.why-choose-us .btn-primary {
+    background: var(--primary-color);
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.why-choose-us .btn-primary:hover {
+    background: var(--secondary-color);
+}
 /* ==========================
    Why Choose Us
 ========================== */
