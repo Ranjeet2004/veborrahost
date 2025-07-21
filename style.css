@@ -200,15 +200,7 @@ body {
     text-align: justify;
 }
 /* Card container basic */
-/* .card {
-    background-color: var(--light-color);
-    border: none;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    overflow: hidden;
-    position: relative;
-} */
+
 .card {
     background: rgba(0, 123, 255, 0.04);
     /* Light brand tint background */
@@ -304,75 +296,6 @@ section.bg-dark ul li {
     margin-bottom: 10px;
 }
 
-
- /* === Founder Section === */
- .founder-section {
-     padding: 60px 20px;
-     background: #fff;
- }
-
- .founder-container {
-     display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-     max-width: 1200px;
-     margin: 0 auto;
- }
-
- .founder-image {
-     flex: 1 1 300px;
-     text-align: center;
-     margin-bottom: 20px;
- }
-
- .founder-image img {
-     width: 280px;
-     height: 280px;
-     object-fit: cover;
-     border-radius: 50%;
-     border: 3px solid #007BFF;
-     /* Blue border */
-     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        object-fit: cover;
-            object-position: top;
- }
-
- .founder-content {
-     flex: 2 1 500px;
-     padding: 0 20px;
- }
-
- .founder-content h2 {
-     font-size: 28px;
-     margin-bottom: 15px;
- }
-
- .founder-content p {
-     font-size: 16px;
-     line-height: 1.6;
-     margin-bottom: 10px;
- }
-
- .founder-content blockquote {
-     font-style: italic;
-     margin: 20px 0;
-     padding-left: 20px;
-     border-left: 4px solid #007BFF;
- }
-
- .btn-connect {
-     display: inline-block;
-     padding: 12px 24px;
-     background: #007BFF;
-     color: #fff;
-     text-decoration: none;
-     border-radius: 50px;
-     transition: background 0.3s ease;
- }
-
- .btn-connect:hover {
-     background: #0056b3;
- }
 .how-work-card {
     background: #fff;
     border-radius: 8px;
@@ -384,6 +307,54 @@ section.bg-dark ul li {
     transform: translateY(-5px);
 }
 
+.how-work-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.how-work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.how-work-card .step-number {
+    font-size: 36px;
+    display: inline-block;
+    background: linear-gradient(45deg, #007bff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.how-work-card h5 {
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.how-work-card p {
+    font-size: 15px;
+    color: #555;
+}
+
+.how-work-card::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.1) 0%, transparent 70%);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+}
+
+.how-work-card:hover::before {
+    top: 0;
+    left: 0;
+}
 .step-number {
     font-size: 1.8rem;
 }
@@ -514,6 +485,55 @@ form button.btn-primary:hover {
     background: var(--secondary-color);
 }
 
+
+.contact-project-section {
+    background: #000;
+    padding: 60px 0;
+    color: #fff;
+}
+
+.text-pink {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.contact-form .form-control::placeholder {
+    color: #bbb;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.btn-pink {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+}
+
+.btn-pink:hover {
+    background: var(--primary-color);
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.badges img {
+    height: 50px;
+    margin-right: 15px;
+}
 /* ==========================
    Footer
 ========================== */
@@ -529,3 +549,120 @@ footer li {
 footer hr {
     opacity: 0.1;
 }
+
+
+
+
+
+.how-work-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+    /* To make space for badge */
+}
+
+.how-work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.step-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.how-work-card h5 {
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.how-work-card p {
+    font-size: 15px;
+    color: #555;
+}
+
+.how-work-card::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 123, 255, 0.1) 0%, transparent 70%);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+}
+
+.how-work-card:hover::before {
+    top: 0;
+    left: 0;
+}
+
+
+
+
+.scroll-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.scroll-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.scroll-content {
+    max-height: 180px;
+    /* Fixed height for content area */
+    overflow: hidden;
+    padding: 20px;
+    text-align: left;
+    transition: max-height 0.5s ease;
+}
+
+.scroll-card:hover .scroll-content {
+    max-height: 400px;
+    /* Auto expand height on hover */
+    overflow-y: auto;
+}
+
+.scroll-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-content::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+}
+
+.scroll-content h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.scroll-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
